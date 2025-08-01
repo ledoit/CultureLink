@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-100 font-sans;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+  
+  .lesson-card {
+    @apply glass-card rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .progress-ring {
+    transition: stroke-dasharray 0.3s ease-in-out;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}
